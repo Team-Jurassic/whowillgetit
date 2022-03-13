@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CreateUserBtn = styled.input`
+export const CreateUserBtn = styled.input`
   /* 화면 */
 
   /* 크기 */
@@ -17,11 +17,6 @@ const CreateUserBtn = styled.input`
   /* 색상 */
   background: #cbb2ff;
   border: solid #c448ff;
-
-  /* 기타 */
-  & + & {
-    margin-left: 1rem;
-  }
 `;
 function createBtn({ children }) {
   return <CreateUserBtn></CreateUserBtn>;
