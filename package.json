@@ -1,0 +1,25 @@
+{
+  "name": "fedevelop",
+  "version": "1.0.0",
+  "description": "who will get it FE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhoWillGetIt/FEdevelop.git"
+  },
+  "keywords": [
+    "who",
+    "will",
+    "get",
+    "it"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WhoWillGetIt/FEdevelop/issues"
+  },
+  "homepage": "https://github.com/WhoWillGetIt/FEdevelop#readme"
+}
