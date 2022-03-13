@@ -77,12 +77,22 @@ function CreateUser({ createUser }) {
     },
     [createUser, name]
   );
+
+  const onKeyPress = useCallback(
+    (e) => {
+      if (e.key === "Enter") {
+        onClick(e);
+      }
+    },
+    [onClick]
+  );
   return (
     <>
       <CreateUserInput
         placeholder="Enter the User"
         onChange={onChange}
         value={name}
+        onKeyDown={onKeyPress}
       ></CreateUserInput>
       <CreateBtn onClick={onClick}>
         <CreateDivX />
