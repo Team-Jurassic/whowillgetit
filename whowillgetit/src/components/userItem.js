@@ -78,13 +78,13 @@ const UserBox = styled.div`
   margin: 10px;
 `;
 
-function userItem({ user }) {
+function userItem({ user, onRemove }) {
   const { id, name, img } = user;
   return (
     <UserBox key={id}>
       <Users>
         <UserImge src={img} />
-        <RemoveBtn>
+        <RemoveBtn onClick={()=>onRemove(id)}>
           <MiusDiv></MiusDiv>
         </RemoveBtn>
       </Users>

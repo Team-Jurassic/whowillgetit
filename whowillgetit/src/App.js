@@ -86,6 +86,10 @@ function App() {
     [users, makeIamge]
   );
 
+  const onRemove = (id) => {
+    setUsers(users.filter(user => user.id !== id));
+  }
+
   return (
     <>
       <BackGround className="container">
@@ -99,7 +103,7 @@ function App() {
         </Marquee>
         <Content>
           <CreateUser className="btn" createUser={createUser}></CreateUser>
-          <UsersContainer users={users}></UsersContainer>
+          <UsersContainer users={users} onRemove={onRemove}></UsersContainer>
           <GetItCounter></GetItCounter>
         </Content>
       </BackGround>
