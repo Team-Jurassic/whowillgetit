@@ -68,6 +68,7 @@ function CreateUser({ createUser }) {
 
   const onClick = useCallback(
     (e) => {
+      if (name === "") return alert("이름을 입력해주세요");
       createUser(name);
       setName(""); // value 값 초기화
 
