@@ -92,7 +92,7 @@ function CreateUser({ createUser }) {
         placeholder="Enter the User"
         onChange={onChange}
         value={name}
-        onKeyDown={onKeyPress}
+        onKeyPress={onKeyPress} // 한국어는 Press나 up으로..
       ></CreateUserInput>
       <CreateBtn onClick={onClick}>
         <CreateDivX />
