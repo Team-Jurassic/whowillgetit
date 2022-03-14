@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { CreateUserBtn } from "./createBtn";
+import { CreateUserInput } from "./createBtn";
 
-const GetItCounterBtn = styled(CreateUserBtn)`
+const GetItCounter = styled(CreateUserInput)`
   /* 크기 */
   width: 11.375rem;
   height: 2.438rem;
 `;
 function getItCounter({ children }) {
-  return <GetItCounterBtn></GetItCounterBtn>;
+  return <GetItCounter></GetItCounter>;
 }
 
 export default getItCounter;
