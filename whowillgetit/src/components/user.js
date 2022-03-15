@@ -8,11 +8,11 @@ const UsersContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-function usersContainer({ users }) {
+function usersContainer({ users, onRemove }) {
   return (
     <UsersContainer>
       {users.map((user, idx) => {
-        return <UserItem key={user.id} user={user} />;
+        return <UserItem key={user.id} user={user} onRemove={onRemove}/>;
       })}
       {/* <UserBox>
         <Users>
