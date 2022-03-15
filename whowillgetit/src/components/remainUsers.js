@@ -9,7 +9,6 @@ export const UsersContainer = styled.div`
 `;
 
 function RemainUsers({ remainUsers }) {
-  console.log(remainUsers);
   return (
     <UsersContainer>
       {remainUsers.map((user, idx) => {

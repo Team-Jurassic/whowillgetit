@@ -42,6 +42,7 @@ const Content = styled.div`
 `;
 
 function App() {
+  document.getElementById("confetti-wrapper").innerHTML = "";
   const [users, setUsers] = useState([
     {
       id: 0,
@@ -49,7 +50,7 @@ function App() {
       img: `${userImage1}`,
     },
   ]);
-  console.log(users);
+
   const images = [userImage1, userImage2, userImage3];
 
   const nextId = useRef(1);
