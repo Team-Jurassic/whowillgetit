@@ -4,7 +4,6 @@ import upCounter from "../assets/images/counter/upCounter.svg";
 import upCounterActive from "../assets/images/counter/upCounterActive.svg";
 import downCounter from "../assets/images/counter/downCounter.svg";
 import downCounterActive from "../assets/images/counter/downCounterActive.svg";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 const GetItCounter = styled.button`
   /* 크기 */

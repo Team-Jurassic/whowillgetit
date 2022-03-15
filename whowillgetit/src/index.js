@@ -5,9 +5,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Result from "./Result";
-
+import { Reset } from "styled-reset";
 ReactDOM.render(
   <React.StrictMode>
+    <Reset />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
