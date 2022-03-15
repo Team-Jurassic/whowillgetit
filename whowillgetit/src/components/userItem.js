@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // import tempImage from "../assets/images/users/user1.svg";
-const Users = styled.div`
+export const Users = styled.div`
   /* 화면 */
 
   /* 크기 */
@@ -26,12 +26,12 @@ const Users = styled.div`
   }
 `;
 
-const UserImge = styled.img`
+export const UserImge = styled.img`
   width: 100%;
   highy: 100%;
 `;
 
-const RemoveBtn = styled.button`
+export const RemoveBtn = styled.button`
   /* 크기 */
   width: 2.688rem;
   height: 2.688rem;
@@ -65,14 +65,14 @@ const MiusDiv = styled.div`
   background: #ffffff;
 `;
 
-const UserName = styled.h1`
+export const UserName = styled.h1`
   /* 크기 */
   font-size: 1.625rem;
   color: #ffffff;
   margin: 0 auto;
 `;
 
-const UserBox = styled.div`
+export const UserBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -84,7 +84,7 @@ function userItem({ user, onRemove }) {
     <UserBox key={id}>
       <Users>
         <UserImge src={img} />
-        <RemoveBtn onClick={()=>onRemove(id)}>
+        <RemoveBtn onClick={() => onRemove(id)}>
           <MiusDiv></MiusDiv>
         </RemoveBtn>
       </Users>

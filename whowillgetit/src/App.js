@@ -62,7 +62,7 @@ function App() {
     // console.log(rand(0, images.length - 1));
     const randomNumber = rand(0, images.length - 1);
     return images[randomNumber];
-  }, [images, users]);
+  }, [images]);
 
   const createUser = useCallback(
     (name) => {
