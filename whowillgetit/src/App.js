@@ -2,11 +2,12 @@ import styled from "styled-components";
 import CreateUser from "./components/createBtn";
 import UsersContainer from "./components/user";
 import GetItCounter from "./components/getitCounter";
+import MarqueeUi from "./components/marqueeUi";
 import { useCallback, useRef, useState } from "react";
 import userImage1 from "./assets/images/users/user1.svg";
 import userImage2 from "./assets/images/users/user2.svg";
 import userImage3 from "./assets/images/users/user3.svg";
-import backGroundText from "./assets/images/backgroundtext.svg";
+
 console.log("app is running!!");
 
 const BackGround = styled.div`
@@ -39,17 +40,6 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const Marquee = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const BackGroundMarqueeLeft = styled.marquee`
-  z-index: 1;
-`;
-const BackGroundText = styled.img``;
 
 function App() {
   const [users, setUsers] = useState([
@@ -87,20 +77,13 @@ function App() {
   );
 
   const onRemove = (id) => {
-    setUsers(users.filter(user => user.id !== id));
-  }
+    setUsers(users.filter((user) => user.id !== id));
+  };
 
   return (
     <>
       <BackGround className="container">
-        <Marquee>
-          <BackGroundMarqueeLeft>
-            <BackGroundText src={backGroundText} />.
-          </BackGroundMarqueeLeft>
-          <BackGroundMarqueeLeft>
-            <BackGroundText src={backGroundText} />.
-          </BackGroundMarqueeLeft>
-        </Marquee>
+        <MarqueeUi />
         <Content>
           <CreateUser className="btn" createUser={createUser}></CreateUser>
           <UsersContainer users={users} onRemove={onRemove}></UsersContainer>
