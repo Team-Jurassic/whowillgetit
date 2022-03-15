@@ -4,7 +4,8 @@ import upCounter from "../assets/images/counter/upCounter.svg";
 import upCounterActive from "../assets/images/counter/upCounterActive.svg";
 import downCounter from "../assets/images/counter/downCounter.svg";
 import downCounterActive from "../assets/images/counter/downCounterActive.svg";
-
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const GetItCounter = styled.button`
   /* 크기 */
   width: 11.375rem;
@@ -46,15 +47,39 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function getItCounter({ children }) {
-  const tempNumber = 3;
+function GetItCounterUI({ users, onRemoveAll, rand }) {
+  let navigate = useNavigate();
+  let counterNumber = 2;
+  const tempNumber = users.length - counterNumber;
+  if (tempNumber > users.length - 1) {
+    alert("To Many!!");
+  }
+  // console.log(rand(0, users.length));
+
+  const returnResult = () => {
+    const removeIdList = [];
+
+    while (tempNumber > removeIdList.length) {
+      let randNum = rand(0, users.length - 1);
+      if (!removeIdList.includes(randNum)) {
+        removeIdList.push(randNum);
+        console.log(randNum, users[randNum].id);
+      }
+    }
+
+    const resultUsers = onRemoveAll(removeIdList);
+    navigate("/result", { state: { resultUsers } });
+  };
+
   return (
     <>
       <CounterBtnUp />
-      <GetItCounter>{tempNumber} GET IT</GetItCounter>
+      <GetItCounter onClick={() => returnResult()}>
+        {counterNumber} GET IT
+      </GetItCounter>
       <CounterBtndown />
     </>
   );
 }
 
-export default getItCounter;
+export default GetItCounterUI;

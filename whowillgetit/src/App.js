@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CreateUser from "./components/createBtn";
 import UsersContainer from "./components/user";
-import GetItCounter from "./components/getitCounter";
+import GetItCounterUI from "./components/getitCounter";
 import MarqueeUi from "./components/marqueeUi";
 import { useCallback, useRef, useState } from "react";
 import userImage1 from "./assets/images/users/user1.svg";
@@ -10,7 +10,7 @@ import userImage3 from "./assets/images/users/user3.svg";
 
 console.log("app is running!!");
 
-const BackGround = styled.div`
+export const BackGround = styled.div`
   /* 화면 */
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ function App() {
       img: `${userImage1}`,
     },
   ]);
-
+  console.log(users);
   const images = [userImage1, userImage2, userImage3];
 
   const nextId = useRef(1);
@@ -59,9 +59,10 @@ function App() {
   };
 
   const makeIamge = useCallback(() => {
-    const randomNumber = rand(0, 2);
+    // console.log(rand(0, images.length - 1));
+    const randomNumber = rand(0, images.length - 1);
     return images[randomNumber];
-  }, [images]);
+  }, [images, users]);
 
   const createUser = useCallback(
     (name) => {
@@ -77,7 +78,13 @@ function App() {
   );
 
   const onRemove = (id) => {
+    console.log("호출됨");
     setUsers(users.filter((user) => user.id !== id));
+  };
+  const onRemoveAll = (list) => {
+    console.log("호출됨", list);
+    console.log(users.filter((user) => !list.includes(user.id)));
+    return users.filter((user) => !list.includes(user.id));
   };
 
   return (
@@ -87,7 +94,11 @@ function App() {
         <Content>
           <CreateUser className="btn" createUser={createUser}></CreateUser>
           <UsersContainer users={users} onRemove={onRemove}></UsersContainer>
-          <GetItCounter></GetItCounter>
+          <GetItCounterUI
+            users={users}
+            onRemoveAll={onRemoveAll}
+            rand={rand}
+          ></GetItCounterUI>
         </Content>
       </BackGround>
     </>
