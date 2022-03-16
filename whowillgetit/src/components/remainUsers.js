@@ -6,12 +6,14 @@ export const UsersContainer = styled.div`
   width: 100%;
   height: auto;
   overflow: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-wrap: nowrap;
+  justify-content: center;
 `;
 const HeaderText = styled.h1`
+  margin: 0.625rem;
   text-align: center;
   font-size: 2.313rem;
   vertical-align: middle;
