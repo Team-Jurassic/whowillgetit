@@ -3,9 +3,13 @@ import styled from "styled-components";
 import RemianUserItem from "./remianUserItem";
 
 export const UsersContainer = styled.div`
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 `;
 const HeaderText = styled.h1`
   text-align: center;

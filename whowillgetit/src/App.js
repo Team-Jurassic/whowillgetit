@@ -67,6 +67,7 @@ function App() {
 
   const createUser = useCallback(
     (name) => {
+      if (users.length >= 10) return alert("Too Many User!");
       const user = {
         id: nextId.current,
         name,

@@ -31,3 +31,7 @@
   height: 1.5rem;
   animation: confettiRain 5s infinite;
 }
+
+body {
+  overflow: hidden;
+}
