@@ -89,7 +89,8 @@ console.log(users)
   }
   const CountDown = () => {
     return(
-      setValue(value -1)
+      value > 0
+      ? setValue(value -1) : null
     )
   }
   
