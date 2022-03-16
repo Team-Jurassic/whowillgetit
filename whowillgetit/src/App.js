@@ -50,7 +50,7 @@ function App() {
       img: `${userImage1}`,
     },
   ]);
-
+  const [counter, setCounter] = useState(0);
   const images = [userImage1, userImage2, userImage3];
 
   const nextId = useRef(1);
@@ -79,13 +79,25 @@ function App() {
   );
 
   const onRemove = (id) => {
-    console.log("호출됨");
     setUsers(users.filter((user) => user.id !== id));
   };
   const onRemoveAll = (list) => {
-    console.log("호출됨", list);
     console.log(users.filter((user) => !list.includes(user.id)));
     return users.filter((user) => !list.includes(user.id));
+  };
+
+  const upCounter = () => {
+    setCounter(counter + 1);
+    if (counter >= 10) {
+      setCounter(10);
+    }
+  };
+
+  const downCounter = () => {
+    setCounter(counter - 1);
+    if (counter <= 1) {
+      setCounter(0);
+    }
   };
 
   return (
@@ -99,6 +111,9 @@ function App() {
             users={users}
             onRemoveAll={onRemoveAll}
             rand={rand}
+            upCounter={upCounter}
+            downCounter={downCounter}
+            counter={counter}
           ></GetItCounterUI>
         </Content>
       </BackGround>

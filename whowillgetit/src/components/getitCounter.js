@@ -46,23 +46,34 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function GetItCounterUI({ users, onRemoveAll, rand }) {
+function GetItCounterUI({
+  users,
+  onRemoveAll,
+  rand,
+  upCounter,
+  downCounter,
+  counter,
+}) {
   let navigate = useNavigate();
-  let counterNumber = 2;
-  const tempNumber = users.length - counterNumber;
-  if (tempNumber > users.length - 1) {
-    alert("To Many!!");
-  }
-  // console.log(rand(0, users.length));
+  let counterNumber = counter;
+  let removeNum = 0;
 
   const returnResult = () => {
     const removeIdList = [];
+    const removeNum = users.length - counterNumber;
+    if (users.length < counterNumber) {
+      // 1명 < 카운터 2명 너무 많아요!
+      return alert("To Many!!");
+    }
+    if (counterNumber === 0) {
+      // 카운터가 0이라면안됩니다
+      return alert("0!!");
+    }
 
-    while (tempNumber > removeIdList.length) {
+    while (removeNum > removeIdList.length) {
       let randNum = rand(0, users.length - 1);
       if (!removeIdList.includes(randNum)) {
         removeIdList.push(randNum);
-        console.log(randNum, users[randNum].id);
       }
     }
 
@@ -72,11 +83,11 @@ function GetItCounterUI({ users, onRemoveAll, rand }) {
 
   return (
     <>
-      <CounterBtnUp />
+      <CounterBtnUp onClick={() => upCounter()} />
       <GetItCounter onClick={() => returnResult()}>
-        {counterNumber} GET IT
+        {counter} GET IT
       </GetItCounter>
-      <CounterBtndown />
+      <CounterBtndown onClick={() => downCounter()} />
     </>
   );
 }
