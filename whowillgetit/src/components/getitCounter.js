@@ -47,9 +47,9 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function GetItCounterUI({ users, onRemoveAll, rand }) {
+function GetItCounterUI({ users, onRemoveAll, rand, value, counterUp, counterDown }) {
   let navigate = useNavigate();
-  let counterNumber = 2;
+  let counterNumber = value;
   const tempNumber = users.length - counterNumber;
   if (tempNumber > users.length - 1) {
     alert("To Many!!");
@@ -71,13 +71,14 @@ function GetItCounterUI({ users, onRemoveAll, rand }) {
     navigate("/result", { state: { resultUsers } });
   };
 
+
   return (
     <>
-      <CounterBtnUp />
+      <CounterBtnUp onClick={() => counterUp()} />
       <GetItCounter onClick={() => returnResult()}>
         {counterNumber} GET IT
       </GetItCounter>
-      <CounterBtndown />
+      <CounterBtndown onClick={() => counterDown()}/>
     </>
   );
 }

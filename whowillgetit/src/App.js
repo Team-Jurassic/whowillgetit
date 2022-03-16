@@ -88,6 +88,28 @@ function App() {
     return users.filter((user) => !list.includes(user.id));
   };
 
+
+const [value, setValue] = useState(1);
+
+  const counterUp = () => {
+    return(
+      setValue(value + 1)
+    )
+  }
+
+  const counterDown = () => {
+    return(
+      value > 0 
+      ? setValue(value - 1) : null
+    )
+  }
+
+
+
+
+
+
+
   return (
     <>
       <BackGround className="container">
@@ -99,6 +121,9 @@ function App() {
             users={users}
             onRemoveAll={onRemoveAll}
             rand={rand}
+            value={value}
+            counterUp={counterUp}
+            counterDown={counterDown}
           ></GetItCounterUI>
         </Content>
       </BackGround>
