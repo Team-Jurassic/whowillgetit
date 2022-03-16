@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Users, UserName, UserBox, UserImge } from "./userItem";
 const RemainUserBox = styled(UserBox)`
-  width: 100%;
-  height: 100%;
   margin-top: 3.125rem;
+  flex-direction: column;
 `;
 const ReMainUsers = styled(Users)`
   /* 크기 */

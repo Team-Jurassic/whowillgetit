@@ -43,13 +43,7 @@ const Content = styled.div`
 
 function App() {
   document.getElementById("confetti-wrapper").innerHTML = "";
-  const [users, setUsers] = useState([
-    {
-      id: 0,
-      name: "default",
-      img: `${userImage1}`,
-    },
-  ]);
+  const [users, setUsers] = useState([]);
   const [counter, setCounter] = useState(0);
   const images = [userImage1, userImage2, userImage3];
 
@@ -67,7 +61,7 @@ function App() {
 
   const createUser = useCallback(
     (name) => {
-      if (users.length >= 10) return alert("Too Many User!");
+      if (users.length >= 10) return alert("⚠️ Too Many User! ⚠️");
       const user = {
         id: nextId.current,
         name,

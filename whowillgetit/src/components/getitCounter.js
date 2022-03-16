@@ -63,11 +63,11 @@ function GetItCounterUI({
     const removeNum = users.length - counterNumber;
     if (users.length < counterNumber) {
       // 1명 < 카운터 2명 너무 많아요!
-      return alert("To Many!!");
+      return alert("⚠️ Over Get It ⚠️ ");
     }
     if (counterNumber === 0) {
       // 카운터가 0이라면안됩니다
-      return alert("0!!");
+      return alert("⚠️ No Get It ⚠️");
     }
 
     while (removeNum > removeIdList.length) {
