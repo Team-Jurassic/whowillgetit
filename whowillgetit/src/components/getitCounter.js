@@ -46,13 +46,13 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function getItCounter({ children }) {
-  const tempNumber = 3;
+function getItCounter({ value, CountUp, CountDown }) {
+  const tempNumber = value;
   return (
     <>
-      <CounterBtnUp />
+      <CounterBtnUp onClick={()=>CountUp()} />
       <GetItCounter>{tempNumber} GET IT</GetItCounter>
-      <CounterBtndown />
+      <CounterBtndown onClick={()=>CountDown()}/>
     </>
   );
 }

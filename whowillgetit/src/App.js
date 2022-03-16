@@ -50,6 +50,8 @@ function App() {
     },
   ]);
 
+
+console.log(users)
   const images = [userImage1, userImage2, userImage3];
 
   const nextId = useRef(1);
@@ -79,6 +81,18 @@ function App() {
   const onRemove = (id) => {
     setUsers(users.filter((user) => user.id !== id));
   };
+  const [value, setValue] = useState(0);
+  const CountUp = () => {
+    return(
+      setValue(value +1)
+    )
+  }
+  const CountDown = () => {
+    return(
+      setValue(value -1)
+    )
+  }
+  
 
   return (
     <>
@@ -87,7 +101,7 @@ function App() {
         <Content>
           <CreateUser className="btn" createUser={createUser}></CreateUser>
           <UsersContainer users={users} onRemove={onRemove}></UsersContainer>
-          <GetItCounter></GetItCounter>
+          <GetItCounter value={value} CountUp={CountUp} CountDown={CountDown}></GetItCounter>
         </Content>
       </BackGround>
     </>
