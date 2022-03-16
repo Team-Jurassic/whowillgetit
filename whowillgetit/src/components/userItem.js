@@ -27,8 +27,8 @@ export const Users = styled.div`
 `;
 
 export const UserImge = styled.img`
-  width: 100%;
-  hight: 100%;
+  width: 95%;
+  hight: 95%;
 `;
 
 export const RemoveBtn = styled.button`
