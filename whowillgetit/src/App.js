@@ -59,8 +59,6 @@ function App() {
     userImage7,
   ];
 
-  console.log(counter);
-
   const nextId = useRef(1);
 
   const rand = (min, max) => {
@@ -91,7 +89,6 @@ function App() {
     setUsers(users.filter((user) => user.id !== id));
   };
   const onRemoveAll = (list) => {
-    console.log(users.filter((user) => !list.includes(user.id)));
     return users.filter((user) => !list.includes(user.id));
   };
 
