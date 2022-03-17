@@ -71,9 +71,11 @@ function GetItCounterUI({
     }
 
     while (removeNum > removeIdList.length) {
-      let randNum = rand(0, users.length - 1);
-      if (!removeIdList.includes(randNum)) {
-        removeIdList.push(randNum);
+      // [1,2,3] =  3 < 3
+      // 5명중에 2명을 남길거야,removeNum =3명을 빼야겠지
+      let randNum = rand(0, users.length - 1); // 5명이야, 0,1,2,3,4 => 0~4 =>  users{ 1,5,19,12,11 } =id,
+      if (!removeIdList.includes(users[randNum].id)) {
+        removeIdList.push(users[randNum].id); // 1,
       }
     }
 
