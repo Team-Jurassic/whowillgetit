@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whowillgetit/static/css/main.2eacdf94.css",
-    "main.js": "/whowillgetit/static/js/main.5e507f74.js",
+    "main.js": "/whowillgetit/static/js/main.cd6dad19.js",
     "static/js/787.46d07335.chunk.js": "/whowillgetit/static/js/787.46d07335.chunk.js",
     "static/media/user5.svg": "/whowillgetit/static/media/user5.f8afd05a1d592e80c791dd68f7e5013c.svg",
     "static/media/user7.svg": "/whowillgetit/static/media/user7.06e0247de139008d752d0147dd65e71b.svg",
@@ -18,11 +18,11 @@
     "static/media/upCounter.svg": "/whowillgetit/static/media/upCounter.fbda5581819f59f5400f26fe5ad37ac5.svg",
     "static/media/upCounterActive.svg": "/whowillgetit/static/media/upCounterActive.9cdf759e11423b7107dd383d2c3ff400.svg",
     "main.2eacdf94.css.map": "/whowillgetit/static/css/main.2eacdf94.css.map",
-    "main.5e507f74.js.map": "/whowillgetit/static/js/main.5e507f74.js.map",
+    "main.cd6dad19.js.map": "/whowillgetit/static/js/main.cd6dad19.js.map",
     "787.46d07335.chunk.js.map": "/whowillgetit/static/js/787.46d07335.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2eacdf94.css",
-    "static/js/main.5e507f74.js"
+    "static/js/main.cd6dad19.js"
   ]
 }
