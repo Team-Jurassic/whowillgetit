@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // import tempImage from "../assets/images/users/user1.svg";
-const Users = styled.div`
+export const Users = styled.div`
   /* 화면 */
 
   /* 크기 */
@@ -26,15 +26,15 @@ const Users = styled.div`
   }
 `;
 
-const UserImge = styled.img`
-  width: 100%;
-  highy: 100%;
+export const UserImge = styled.img`
+  width: 95%;
+  hight: 95%;
 `;
 
-const RemoveBtn = styled.button`
+export const RemoveBtn = styled.button`
   /* 크기 */
-  width: 2.688rem;
-  height: 2.688rem;
+  width: 2.3rem;
+  height: 2.3rem;
   border: 0px;
   border-radius: 50%;
 
@@ -43,7 +43,7 @@ const RemoveBtn = styled.button`
 
   /* 위치 */
   position: relative;
-  top: -8.8rem;
+  top: -8rem;
   left: 3rem;
 
   &:active {
@@ -65,14 +65,14 @@ const MiusDiv = styled.div`
   background: #ffffff;
 `;
 
-const UserName = styled.h1`
+export const UserName = styled.h1`
   /* 크기 */
   font-size: 1.625rem;
   color: #ffffff;
   margin: 0 auto;
 `;
 
-const UserBox = styled.div`
+export const UserBox = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -84,7 +84,7 @@ function userItem({ user, onRemove }) {
     <UserBox key={id}>
       <Users>
         <UserImge src={img} />
-        <RemoveBtn onClick={()=>onRemove(id)}>
+        <RemoveBtn onClick={() => onRemove(id)}>
           <MiusDiv></MiusDiv>
         </RemoveBtn>
       </Users>

@@ -9,6 +9,7 @@ const Marquee = styled.div`
   align-items: center;
 `;
 const BackGroundMarqueeLeft = styled.marquee`
+  width: 100%;
   z-index: 1;
 `;
 const BackGroundText = styled.img``;
