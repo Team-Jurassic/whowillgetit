@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import CreateUser from "./components/createBtn";
 import UsersContainer from "./components/user";
-import GetItCounter from "./components/getitCounter";
+import GetItCounterUI from "./components/getitCounter";
 import MarqueeUi from "./components/marqueeUi";
 import { useCallback, useRef, useState } from "react";
 import userImage1 from "./assets/images/users/user1.svg";
 import userImage2 from "./assets/images/users/user2.svg";
 import userImage3 from "./assets/images/users/user3.svg";
+import userImage4 from "./assets/images/users/user4.svg";
+import userImage5 from "./assets/images/users/user5.svg";
+import userImage6 from "./assets/images/users/user6.svg";
+import userImage7 from "./assets/images/users/user7.svg";
 
 console.log("app is running!!");
 
-const BackGround = styled.div`
+export const BackGround = styled.div`
   /* 화면 */
   display: flex;
   flex-direction: column;
@@ -42,15 +46,20 @@ const Content = styled.div`
 `;
 
 function App() {
-  const [users, setUsers] = useState([
-    {
-      id: 0,
-      name: "default",
-      img: `${userImage1}`,
-    },
-  ]);
+  document.getElementById("confetti-wrapper").innerHTML = "";
+  const [users, setUsers] = useState([]);
+  const [counter, setCounter] = useState(0);
+  const images = [
+    userImage1,
+    userImage2,
+    userImage3,
+    userImage4,
+    userImage5,
+    userImage6,
+    userImage7,
+  ];
 
-  const images = [userImage1, userImage2, userImage3];
+  console.log(counter);
 
   const nextId = useRef(1);
 
@@ -59,12 +68,14 @@ function App() {
   };
 
   const makeIamge = useCallback(() => {
-    const randomNumber = rand(0, 2);
+    // console.log(rand(0, images.length - 1));
+    const randomNumber = rand(0, images.length - 1);
     return images[randomNumber];
   }, [images]);
 
   const createUser = useCallback(
     (name) => {
+      if (users.length >= 10) return alert("⚠️ Too Many User! ⚠️");
       const user = {
         id: nextId.current,
         name,
@@ -79,6 +90,24 @@ function App() {
   const onRemove = (id) => {
     setUsers(users.filter((user) => user.id !== id));
   };
+  const onRemoveAll = (list) => {
+    console.log(users.filter((user) => !list.includes(user.id)));
+    return users.filter((user) => !list.includes(user.id));
+  };
+
+  const upCounter = () => {
+    setCounter(counter + 1);
+    if (counter >= 10) {
+      setCounter(10);
+    }
+  };
+
+  const downCounter = () => {
+    setCounter(counter - 1);
+    if (counter <= 1) {
+      setCounter(0);
+    }
+  };
 
   return (
     <>
@@ -87,7 +116,14 @@ function App() {
         <Content>
           <CreateUser className="btn" createUser={createUser}></CreateUser>
           <UsersContainer users={users} onRemove={onRemove}></UsersContainer>
-          <GetItCounter></GetItCounter>
+          <GetItCounterUI
+            users={users}
+            onRemoveAll={onRemoveAll}
+            rand={rand}
+            upCounter={upCounter}
+            downCounter={downCounter}
+            counter={counter}
+          ></GetItCounterUI>
         </Content>
       </BackGround>
     </>

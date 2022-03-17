@@ -4,7 +4,7 @@ import upCounter from "../assets/images/counter/upCounter.svg";
 import upCounterActive from "../assets/images/counter/upCounterActive.svg";
 import downCounter from "../assets/images/counter/downCounter.svg";
 import downCounterActive from "../assets/images/counter/downCounterActive.svg";
-
+import { useNavigate } from "react-router-dom";
 const GetItCounter = styled.button`
   /* 크기 */
   width: 11.375rem;
@@ -46,15 +46,52 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function getItCounter({ children }) {
-  const tempNumber = 3;
+function GetItCounterUI({
+  users,
+  onRemoveAll,
+  rand,
+  upCounter,
+  downCounter,
+  counter,
+}) {
+  let navigate = useNavigate();
+  let counterNumber = counter;
+  let removeNum = 0;
+
+  const returnResult = () => {
+    const removeIdList = [];
+    const removeNum = users.length - counterNumber;
+    if (users.length < counterNumber) {
+      // 1명 < 카운터 2명 너무 많아요!
+      return alert("⚠️ Over Get It ⚠️ ");
+    }
+    if (counterNumber === 0) {
+      // 카운터가 0이라면안됩니다
+      return alert("⚠️ No Get It ⚠️");
+    }
+
+    while (removeNum > removeIdList.length) {
+      // [1,2,3] =  3 < 3
+      // 5명중에 2명을 남길거야,removeNum =3명을 빼야겠지
+      let randNum = rand(0, users.length - 1); // 5명이야, 0,1,2,3,4 => 0~4 =>  users{ 1,5,19,12,11 } =id,
+      if (!removeIdList.includes(users[randNum].id)) {
+        removeIdList.push(users[randNum].id); // 1,
+      }
+    }
+
+    const resultUsers = onRemoveAll(removeIdList);
+    navigate("/result", { state: { resultUsers } });
+  };
+
   return (
     <>
-      <CounterBtnUp />
-      <GetItCounter>{tempNumber} GET IT</GetItCounter>
-      <CounterBtndown />
+      <CounterBtnUp onClick={() => upCounter()} />
+      <GetItCounter onClick={() => returnResult()}>
+        {counter} GET IT
+      </GetItCounter>
+      <CounterBtndown onClick={() => downCounter()} />
     </>
   );
 }
 
-export default getItCounter;
+export default GetItCounterUI;
