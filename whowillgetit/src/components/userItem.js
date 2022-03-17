@@ -33,8 +33,8 @@ export const UserImge = styled.img`
 
 export const RemoveBtn = styled.button`
   /* 크기 */
-  width: 2.688rem;
-  height: 2.688rem;
+  width: 2.3rem;
+  height: 2.3rem;
   border: 0px;
   border-radius: 50%;
 
@@ -43,7 +43,7 @@ export const RemoveBtn = styled.button`
 
   /* 위치 */
   position: relative;
-  top: -8.8rem;
+  top: -8rem;
   left: 3rem;
 
   &:active {
