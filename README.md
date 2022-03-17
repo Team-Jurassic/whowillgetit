@@ -1,5 +1,6 @@
 <h1 align="center">🎲 Who Will Get It</h1>
 <h3 align="center">Check out Who Will Get It!</h3>
+<img src="whowillgetit\src\assets\images\users\user1.svg" align="center">
 
 <p align="center">
     <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -9,12 +10,16 @@
 </p>
 
 ## 😁 서비스 소개
-- 
+- Who Will Get It은 제비뽑기 서비스입니다. 
 
 ## 👬 팀원 소개
+- [양상우](https://github.com/IGhost-P)
+- [김승덕](https://github.com/kimseungdeok)
+- [정혜연](https://github.com/HY219)
+
 
 ## 🎯 핵심 기능
-- 깃허브 페이지 주소
+<img src="whowillgetit\src\assets\images\operation.gif">
 
 ## 📝 License
-- MIT?
+- MIT
