@@ -1,6 +1,7 @@
 <h1 align="center">🎲 Who Will Get It</h1>
+<img src="whowillgetit\src\assets\images\users\user1.svg" align="center" width="100" height="100">
 <h3 align="center">Check out Who Will Get It!</h3>
-<img src="whowillgetit\src\assets\images\users\user1.svg" align="center">
+<img src="whowillgetit\src\assets\images\operation.gif">
 
 <p align="center">
     <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -19,7 +20,7 @@
 
 
 ## 🎯 핵심 기능
-<img src="whowillgetit\src\assets\images\operation.gif">
+
 
 ## 📝 License
 - MIT
