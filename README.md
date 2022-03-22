@@ -1,5 +1,5 @@
 <h1 align="center">🎲 Who Will Get It</h1>
-![image](https://user-images.githubusercontent.com/79236624/159426040-9417b676-c8d2-45ff-bc60-03e8f3c6625c.png)
+
 <h3 align="center">Check out Who Will Get It!</h3>
 <img src="whowillgetit\src\assets\images\operation.gif">
 
@@ -11,6 +11,8 @@
 </p>
 
 ## 😁 서비스 소개
+
+![image](https://user-images.githubusercontent.com/79236624/159426040-9417b676-c8d2-45ff-bc60-03e8f3c6625c.png)
 
 - Who Will Get It은 제비뽑기 서비스입니다.
 
