@@ -46,17 +46,6 @@ const CounterBtndown = styled(CounterBtnUp)`
   }
 `;
 
-function GetItCounterUI({
-  users,
-  onRemoveAll,
-  rand,
-  upCounter,
-  downCounter,
-  counter,
-}) {
-  let navigate = useNavigate();
-  let counterNumber = counter;
-  let removeNum = 0;
 
   const returnResult = () => {
     const removeIdList = [];
@@ -83,13 +72,12 @@ function GetItCounterUI({
     navigate("/result", { state: { resultUsers } });
   };
 
+
   return (
     <>
-      <CounterBtnUp onClick={() => upCounter()} />
       <GetItCounter onClick={() => returnResult()}>
         {counter} GET IT
       </GetItCounter>
-      <CounterBtndown onClick={() => downCounter()} />
     </>
   );
 }

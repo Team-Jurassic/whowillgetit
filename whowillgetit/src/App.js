@@ -92,20 +92,6 @@ function App() {
     return users.filter((user) => !list.includes(user.id));
   };
 
-  const upCounter = () => {
-    setCounter(counter + 1);
-    if (counter >= 10) {
-      setCounter(10);
-    }
-  };
-
-  const downCounter = () => {
-    setCounter(counter - 1);
-    if (counter <= 1) {
-      setCounter(0);
-    }
-  };
-
   return (
     <>
       <BackGround className="container">
@@ -117,9 +103,6 @@ function App() {
             users={users}
             onRemoveAll={onRemoveAll}
             rand={rand}
-            upCounter={upCounter}
-            downCounter={downCounter}
-            counter={counter}
           ></GetItCounterUI>
         </Content>
       </BackGround>
