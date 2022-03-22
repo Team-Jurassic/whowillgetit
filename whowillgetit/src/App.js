@@ -59,8 +59,6 @@ function App() {
     userImage7,
   ];
 
-  console.log(counter);
-
   const nextId = useRef(1);
 
   const rand = (min, max) => {
@@ -91,22 +89,7 @@ function App() {
     setUsers(users.filter((user) => user.id !== id));
   };
   const onRemoveAll = (list) => {
-    console.log(users.filter((user) => !list.includes(user.id)));
     return users.filter((user) => !list.includes(user.id));
-  };
-
-  const upCounter = () => {
-    setCounter(counter + 1);
-    if (counter >= 10) {
-      setCounter(10);
-    }
-  };
-
-  const downCounter = () => {
-    setCounter(counter - 1);
-    if (counter <= 1) {
-      setCounter(0);
-    }
   };
 
   return (
@@ -120,9 +103,6 @@ function App() {
             users={users}
             onRemoveAll={onRemoveAll}
             rand={rand}
-            upCounter={upCounter}
-            downCounter={downCounter}
-            counter={counter}
           ></GetItCounterUI>
         </Content>
       </BackGround>

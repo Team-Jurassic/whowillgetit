@@ -9,7 +9,7 @@ import { Reset } from "styled-reset";
 ReactDOM.render(
   <React.StrictMode>
     <Reset />
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="result" element={<Result />} />
