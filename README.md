@@ -1,6 +1,6 @@
 <h1 align="center">🎲 Who Will Get It</h1>
 <div align="center">
-<img src="whowillgetit\src\assets\images\users\user1.svg" width="100" height="100">
+![image](https://user-images.githubusercontent.com/79236624/159425995-372eae6c-1e4b-4c20-bf86-a5d74cfff97d.png)
 </div>
 <h3 align="center">Check out Who Will Get It!</h3>
 <img src="whowillgetit\src\assets\images\operation.gif">
