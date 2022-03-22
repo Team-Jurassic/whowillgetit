@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/whowillgetit/static/css/main.2eacdf94.css",
+    "main.js": "/whowillgetit/static/js/main.cd6dad19.js",
+    "static/js/787.46d07335.chunk.js": "/whowillgetit/static/js/787.46d07335.chunk.js",
+    "static/media/user5.svg": "/whowillgetit/static/media/user5.f8afd05a1d592e80c791dd68f7e5013c.svg",
+    "static/media/user7.svg": "/whowillgetit/static/media/user7.06e0247de139008d752d0147dd65e71b.svg",
+    "static/media/user2.svg": "/whowillgetit/static/media/user2.149dd9b6ba5921d0b06f683cdcb445db.svg",
+    "static/media/user1.svg": "/whowillgetit/static/media/user1.eff0c25b2f02cf83d8079b83310d3bcf.svg",
+    "static/media/user4.svg": "/whowillgetit/static/media/user4.b9d796984c44a761bd9023e1e181d179.svg",
+    "static/media/user6.svg": "/whowillgetit/static/media/user6.99303d5b11b19a4336ce35bbce7e9d53.svg",
+    "static/media/user3.svg": "/whowillgetit/static/media/user3.012cb81a3b29142c5b8bf5a9a6e3c985.svg",
+    "static/media/backgroundtext.svg": "/whowillgetit/static/media/backgroundtext.036f7c556b8767ad83ef4c85d04c0f5b.svg",
+    "index.html": "/whowillgetit/index.html",
+    "static/media/backarrow.svg": "/whowillgetit/static/media/backarrow.4f778b55f526930d82835ad2c402b0e4.svg",
+    "static/media/downCounter.svg": "/whowillgetit/static/media/downCounter.07db1def87763e5881d61c81acef4283.svg",
+    "static/media/downCounterActive.svg": "/whowillgetit/static/media/downCounterActive.78ebfae04dca3a29014a398c18cd8fe0.svg",
+    "static/media/upCounter.svg": "/whowillgetit/static/media/upCounter.fbda5581819f59f5400f26fe5ad37ac5.svg",
+    "static/media/upCounterActive.svg": "/whowillgetit/static/media/upCounterActive.9cdf759e11423b7107dd383d2c3ff400.svg",
+    "main.2eacdf94.css.map": "/whowillgetit/static/css/main.2eacdf94.css.map",
+    "main.cd6dad19.js.map": "/whowillgetit/static/js/main.cd6dad19.js.map",
+    "787.46d07335.chunk.js.map": "/whowillgetit/static/js/787.46d07335.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2eacdf94.css",
+    "static/js/main.cd6dad19.js"
+  ]
+}

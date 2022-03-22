@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Users, UserName, UserBox, UserImge } from "./userItem";
-// import tempImage from "../assets/images/users/user1.svg";
+const RemainUserBox = styled(UserBox)`
+  margin-top: 3.125rem;
+  flex-direction: column;
+`;
 const ReMainUsers = styled(Users)`
   /* 크기 */
   width: 16.375rem;
@@ -32,13 +35,13 @@ const Congratulation = styled.div`
 function RemainUserItem({ user }) {
   const { id, name, img } = user;
   return (
-    <UserBox key={id}>
+    <RemainUserBox key={id}>
       <ReMainUsers>
         <UserImge src={img} />
         <Congratulation>🎉</Congratulation>
       </ReMainUsers>
       <UserName>{name}</UserName>
-    </UserBox>
+    </RemainUserBox>
   );
 }
 

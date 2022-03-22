@@ -7,6 +7,10 @@ import { useCallback, useRef, useState } from "react";
 import userImage1 from "./assets/images/users/user1.svg";
 import userImage2 from "./assets/images/users/user2.svg";
 import userImage3 from "./assets/images/users/user3.svg";
+import userImage4 from "./assets/images/users/user4.svg";
+import userImage5 from "./assets/images/users/user5.svg";
+import userImage6 from "./assets/images/users/user6.svg";
+import userImage7 from "./assets/images/users/user7.svg";
 
 console.log("app is running!!");
 
@@ -43,15 +47,17 @@ const Content = styled.div`
 
 function App() {
   document.getElementById("confetti-wrapper").innerHTML = "";
-  const [users, setUsers] = useState([
-    {
-      id: 0,
-      name: "default",
-      img: `${userImage1}`,
-    },
-  ]);
-
-  const images = [userImage1, userImage2, userImage3];
+  const [users, setUsers] = useState([]);
+  const [counter, setCounter] = useState(0);
+  const images = [
+    userImage1,
+    userImage2,
+    userImage3,
+    userImage4,
+    userImage5,
+    userImage6,
+    userImage7,
+  ];
 
   const nextId = useRef(1);
 
@@ -67,6 +73,7 @@ function App() {
 
   const createUser = useCallback(
     (name) => {
+      if (users.length >= 10) return alert("⚠️ Too Many User! ⚠️");
       const user = {
         id: nextId.current,
         name,
@@ -79,36 +86,11 @@ function App() {
   );
 
   const onRemove = (id) => {
-    console.log("호출됨");
     setUsers(users.filter((user) => user.id !== id));
   };
   const onRemoveAll = (list) => {
-    console.log("호출됨", list);
-    console.log(users.filter((user) => !list.includes(user.id)));
     return users.filter((user) => !list.includes(user.id));
   };
-
-
-const [value, setValue] = useState(1);
-
-  const counterUp = () => {
-    return(
-      setValue(value + 1)
-    )
-  }
-
-  const counterDown = () => {
-    return(
-      value > 0 
-      ? setValue(value - 1) : null
-    )
-  }
-
-
-
-
-
-
 
   return (
     <>
@@ -121,9 +103,6 @@ const [value, setValue] = useState(1);
             users={users}
             onRemoveAll={onRemoveAll}
             rand={rand}
-            value={value}
-            counterUp={counterUp}
-            counterDown={counterDown}
           ></GetItCounterUI>
         </Content>
       </BackGround>
