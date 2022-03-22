@@ -1,5 +1,5 @@
 <h1 align="center">🎲 Who Will Get It</h1>
-<div align="center> <img src="whowillgetit/whowillgetit/src/assets/images/users/user3.svg" /> </div>
+<div align="center> <img src="./whowillgetit/src/assets/images/users/user3.svg" /> </div>
 <h3 align="center">Check out Who Will Get It!</h3>
 <img src="whowillgetit\src\assets\images\operation.gif">
 
