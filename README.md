@@ -1,7 +1,5 @@
 <h1 align="center">🎲 Who Will Get It</h1>
-<div align="center">
-![image](https://user-images.githubusercontent.com/79236624/159425995-372eae6c-1e4b-4c20-bf86-a5d74cfff97d.png)
-</div>
+![image](https://user-images.githubusercontent.com/79236624/159426040-9417b676-c8d2-45ff-bc60-03e8f3c6625c.png)
 <h3 align="center">Check out Who Will Get It!</h3>
 <img src="whowillgetit\src\assets\images\operation.gif">
 
