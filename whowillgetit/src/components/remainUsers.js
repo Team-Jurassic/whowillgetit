@@ -26,8 +26,8 @@ function RemainUsers({ remainUsers }) {
   return (
     <>
       <HeaderText>
-        🎉🎉 <span style={{ fontSize: "3rem" }}> {getItUsers} </span> GET IT
-        🎉🎉
+        🎉🎉🎉 <span style={{ fontSize: "3rem" }}> {getItUsers} </span> GET IT
+        🎉🎉🎉
       </HeaderText>
       <UsersContainer>
         {remainUsers.map((user, idx) => {
